@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+using System;
 
 namespace ConsoleApp40
 {
@@ -22,8 +21,6 @@ namespace ConsoleApp40
             Name = name;
             Age = age;
         }
-
-        
     }
 
     class Cat : Animal
@@ -32,11 +29,13 @@ namespace ConsoleApp40
 
         public Cat(string name, int age, string color) : base(name, age)
         {
-            this.Color = color;
+            Color = color;
         }
-        public void Show()
+
+        public new void Show() 
         {
-            Console.WriteLine($"Imię: {Name}, Wiek: {Age},kolor:{Color}");
+            base.Show();
+            Console.WriteLine($"kolor: {Color}");
         }
     }
 }
